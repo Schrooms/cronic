@@ -13,6 +13,6 @@ cronic will become a job monitoring service
 
 Technology choices:
 - [x] python 3.7
-- [ ] *a web framework*
+- [x] Flask
 - [x] Docker
 - [ ] *a database*

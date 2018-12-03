@@ -16,10 +16,10 @@ def test_index(client):
 
 
 def test_start(client):
-    rv = client.get('/start')
+    rv = client.post('/start')
     assert b'Start' in rv.data
 
 
 def test_stop(client):
-    rv = client.get('/stop')
+    rv = client.post('/stop')
     assert b'Stop' in rv.data

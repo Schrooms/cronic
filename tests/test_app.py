@@ -1,14 +1,15 @@
-import app
+from app import cronic
 import pytest
 
 
 @pytest.fixture
 def client():
-    app.config['TESTING'] = True
+    cronic.app.config['TESTING'] = True
     # client = app.test_client()
+    client = cronic.app.test_client()
     yield client
 
 
 def test_index(client):
-    print(dir(app))
-    assert False
+    rv = client.get('/')
+    assert b'Index Page' in rv.data

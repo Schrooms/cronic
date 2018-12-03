@@ -10,7 +10,7 @@ def index():
 
 @app.route('/start')
 def start():
-    return 'start'
+    return 'Start'
 
 
 @app.route('/stop')
